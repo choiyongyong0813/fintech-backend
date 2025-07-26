@@ -5,10 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * 사용자 정보를 저장하는 Entity 클래스입니다.
- * DB의 users 테이블과 매핑됩니다.
- */
+
+//사용자 정보를 저장하는 Entity 클래스
+//DB users 테이블과 매핑
+
 @Entity
 @Table(name = "users")
 @Getter
@@ -21,11 +21,11 @@ public class User {
     private Long id;
 
     @Column(nullable = false, unique = true)
-    private String email; // 사용자 이메일 (로그인 ID로 사용)
+    private String email; // 사용자 이메일
 
     @Column(nullable = false)
     private String name; // 사용자 이름
 
     @Column(nullable = false)
-    private String password; // 사용자 비밀번호 (암호화 저장 예정)
+    private String password; // 사용자 비밀번호
 }
